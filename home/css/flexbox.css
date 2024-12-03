@@ -1,14 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: DodgerBlue;
-  }
-   
-  .flex-container > div {
-    background-color: #f1f1f1;
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-    line-height: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px; /* Adds consistent spacing between items */
+    background-color: #e3e3e3;
+    border-top: 4px solid #333;
+}
+
+.flex-container > div {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+    line-height: 1.6;
     font-size: 16px;
-  }
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flex-container > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flex-container > div strong {
+    font-size: 18px;
+    color: #0056b3;
+}
+
+.flex-container > div:last-child {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-container > div {
+        width: 90%;
+    }
+}
