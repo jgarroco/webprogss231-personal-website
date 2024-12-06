@@ -5,19 +5,72 @@
 .item5 { grid-area: footer; }
 
 .grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+ display: grid;
+ grid-template-areas:
+   "header header header header header header"
+   "menu main main main right right"
+   "menu footer footer footer footer footer";
+ gap: 20px;
+ background-color: #f0f4f8;
+ padding: 20px; 
+ border-radius: 10px; 
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+ background-color: rgba(255, 255, 255, 0.9); 
+ text-align: center;
+ padding: 20px 10px;
+ font-size: 20px;
+ font-family: 'Arial', sans-serif; 
+ border-radius: 10px;
+ transition: transform 0.3s, box-shadow 0.3s;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.grid-container > div:hover {
+ transform: scale(1.05); 
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item1 {
+ font-size: 30px;
+ font-weight: bold;
+ color: #ffffff;
+ background-color: #2196F3; 
+}
+
+.item2 {
+ background-color: #ff5722; 
+ color: #ffffff;
+}
+
+.item3 {
+ background-color: #4caf50;
+ color: #ffffff;
+}
+
+.item4 {
+ background-color: #ff9800;
+ color: #ffffff;
+}
+
+.item5 {
+ background-color: #607d8b; 
+ color: #ffffff;
+}
+
+@media (max-width: 768px) {
+ .grid-container {
+   grid-template-areas:
+     "header"
+     "menu"
+     "main"
+     "right"
+     "footer";
+ }
+ .grid-container > div {
+   font-size: 18px;
+   padding: 15px;
+ }
 }
