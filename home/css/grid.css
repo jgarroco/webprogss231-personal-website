@@ -36,28 +36,28 @@
 .item1 {
  font-size: 30px;
  font-weight: bold;
- color: #ffffff;
+ color: #000000;
  background-color: #2196F3; 
 }
 
 .item2 {
  background-color: #ff5722; 
- color: #ffffff;
+ color: #000000;
 }
 
 .item3 {
  background-color: #4caf50;
- color: #ffffff;
+ color: #000000;
 }
 
 .item4 {
  background-color: #ff9800;
- color: #ffffff;
+ color: #000000;
 }
 
 .item5 {
  background-color: #607d8b; 
- color: #ffffff;
+ color: #000000;
 }
 
 @media (max-width: 768px) {
