@@ -1,9 +1,10 @@
 .container {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
   height: 100vh;
-  border: 2px dashed red; 
+  border: 2px dashed red;
 }
 
 header, footer {
@@ -13,18 +14,24 @@ header, footer {
   text-align: center;
 }
 
+header {
+  grid-column: span 2;
+}
+
 main {
-  display: flex;
-  gap: 10px;
-  background-color: lightgreen;
+  display: contents;
 }
 
 .main-content {
-  flex: 2;
+  grid-column: 1 / 2;
   background-color: white;
 }
 
 .sidebar {
-  flex: 1;
+  grid-column: 2 / 3;
   background-color: lightblue;
+}
+
+footer {
+  grid-column: span 2;
 }
