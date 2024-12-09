@@ -13,9 +13,11 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto; 
+  grid-template-columns: 1fr; 
   height: 100vh;
-  gap: 20px;
+  gap: 10px; 
+  border: 2px dashed red; 
 }
 
 header, footer {
@@ -23,26 +25,30 @@ header, footer {
   color: white;
   padding: 20px;
   text-align: center;
+  border: 2px solid blue;
 }
 
 main {
   display: flex;
   gap: 20px;
   padding: 20px;
+  border: 2px solid green; 
 }
 
 .main-content {
   flex: 2;
   background-color: white;
   padding: 20px;
+  border: 2px solid orange; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
 .sidebar {
   flex: 1;
-  background-color: #e9ecef;
+  background-color: #e9ecef; 
   padding: 20px;
+  border: 2px solid purple; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
