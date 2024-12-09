@@ -29,7 +29,6 @@ main {
   padding: 20px;
 }
 
-/* Main Content */
 .main-content {
   background: #ffffff;
   padding: 20px;
@@ -64,15 +63,18 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center; 
+  align-items: center;
 }
 
 .gallery img {
-  width: 100px;
-  height: 100px;
+  max-width: 100px; 
+  max-height: 100px; 
+  width: auto; 
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   object-fit: cover; 
+}
 
 footer {
   background: #333;
