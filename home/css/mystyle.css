@@ -69,12 +69,14 @@ main {
 }
 
 .gallery img {
-  width: 100%;
+  max-width: 100%; 
+  height: auto;    
+  max-height: 150px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover; 
 }
 
-/* Footer */
 footer {
   background: #333;
   color: white;
