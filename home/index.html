@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Web Page</title>
-  <link rel="stylesheet" href="css/mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Website</title>
+    <link rel="stylesheet" href="css/myStyle.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Welcome to My Web Page!</h1>
-    </header>
-
-    <main>
-      <section class="main-content">
-        <h2>Education / Achievements</h2>
-        <ul>
-          <li>
-            Graduated High School with High Honors
-            <br> Multiple achievements related to Art.
-          </li>
-        </ul>
-        <h2>Course</h2>
-        <p>BSCS-SS</p>
-        <h2>IT Experience</h2>
-        <p>
-          I made software that saved our environment! I’m basically an Avenger, one of Earth’s mightiest heroes, and my superpower is creating software that helps save the planet.
-        </p>
-        <h2>Hobbies & Interests</h2>
-        <ul>
-          <li>Music</li>
-          <li>Programming</li>
-          <li>Art</li>
-        </ul>
-        <h2>Goals in Life / Dream</h2>
-        <p>I want to work for the government and make lots of money while contributing to a better world!</p>
-      </section>
-
-      <aside class="sidebar">
-        <h2>Sidebar</h2>
-        <p>Subscribe to my Channel</p>
-        <div class="gallery">
-          <img src="css/image1.jpg" alt="Gallery Image 1">
-          <img src="css/image2.jpg" alt="Gallery Image 2">
+    <div class="container">
+        <header>
+            <h1>Drawing Website</h1>
+        </header>
+        <div class="controls">
+            <button id="new">New Canvas</button>
+            <button id="undo">Undo</button>
+            <button id="redo">Redo</button>
+            <input type="color" id="colorPicker" value="#000000">
+            <input type="range" id="brushSize" min="1" max="10" value="5">
         </div>
-      </aside>
-    </main>
-
-    <footer>
-      <p>Footer</p>
-    </footer>
-  </div>
+        <div class="canvas-container">
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+    </div>
+    <script src="myScript.js"></script>
 </body>
 </html>
