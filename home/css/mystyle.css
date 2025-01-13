@@ -55,7 +55,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 95%; /* Increased width */
-    max-width: 1400px; /* Larger container */
+    max-width: 1400px;
     gap: 30px;
     margin: 30px 0;
 }
@@ -67,21 +67,18 @@ body {
     border: 1px solid #3c3f41;
     border-radius: 5px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 30px;
-    height: 500px; /* Increased height */
+    align-items: center;
+    height: 600px; /* Larger height */
+    overflow: hidden;
+    padding: 10px;
 }
 
-.about-section h2 {
-    font-size: 2rem; /* Larger heading */
-    margin-bottom: 15px;
-}
-
-.about-section p {
-    font-size: 1.2rem; /* Larger text */
-    line-height: 1.6;
+.about-section .about-gif {
+    width: 100%; /* Make the GIF larger */
+    height: 100%; /* Scale to fit the section */
+    object-fit: cover; /* Ensure the GIF fits nicely */
+    display: block;
 }
 
 /* Gallery Section */
@@ -92,7 +89,7 @@ body {
     border: 1px solid #3c3f41;
     border-radius: 5px;
     padding: 30px;
-    height: 500px; /* Match the "About Me" height */
+    height: 600px; /* Match the "About Me" height */
 }
 
 .gallery h2 {
