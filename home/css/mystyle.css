@@ -52,25 +52,24 @@ body {
 /* About Section */
 .about-section {
     flex: 1;
-    padding: 0; /* Removed padding to ensure full coverage */
+    padding: 0; /* Ensure no padding reduces space */
     background-color: #1e1e1e;
     border: 1px solid #3c3f41;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Make it take up full height */
-    max-height: 400px; /* Ensure the container doesn't shrink */
-    width: 100%; /* Take up full width of its container */
-    overflow: hidden; /* Prevent overflow issues */
+    height: 100%; /* Make it take up all available height */
+    width: 100%; /* Take up full width of the container */
+    max-height: 350px; /* Constrain the max height */
+    overflow: hidden; /* Prevent GIF overflow */
 }
 
 .about-section .about-gif {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    object-fit: fill; /* Ensure the GIF fills the container */
-    display: block; /* Ensure it's displayed properly */
-    max-height: 400px; /* Limit GIF height to container's max height */
+    object-fit: cover; /* Ensure the GIF fills the container while maintaining its aspect ratio */
+    display: block; /* Ensure it behaves properly */
 }
 
 
