@@ -49,16 +49,6 @@ body {
     transform: scale(1.1);
 }
 
-/* About Section and Gallery Side by Side */
-.main-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    width: 90%;
-    margin: 20px auto;
-}
-
 /* About Section */
 .about-section {
     flex: 1;
@@ -76,7 +66,8 @@ body {
 .about-section .about-gif {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    object-fit: cover; /* Ensure the GIF covers the entire section */
+    object-fit: contain; /* Adjust the GIF to fit the section without cropping */
+    display: block; /* Ensure it's displayed properly */
 }
 
 /* Gallery Section */
