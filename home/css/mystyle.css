@@ -83,12 +83,12 @@ body {
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px; /* Reduced padding to avoid overflowing */
   height: 300px; /* Fixed height */
-  overflow-y: auto; /* Add vertical scrolling if content exceeds height */
+  overflow-y: auto; /* Only vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  box-sizing: border-box; /* Ensure padding doesn't exceed boundaries */
-  word-wrap: break-word; /* Ensure long text wraps */
+  box-sizing: border-box; /* Ensure padding stays inside bounds */
+  word-wrap: break-word; /* Break long words to fit inside */
 }
 
 /* Gallery Section */
@@ -97,10 +97,10 @@ body {
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px; /* Reduced padding for consistency */
   text-align: center;
   height: 300px; /* Fixed height */
-  box-sizing: border-box; /* Ensure padding doesn't exceed boundaries */
+  box-sizing: border-box;
 }
 
 /* Gallery Container */
