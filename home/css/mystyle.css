@@ -128,7 +128,13 @@ body {
   border: 1px solid #555555;
 }
 
-/* Navigation Buttons for Gallery */
+.gallery-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  border-radius: 5px; /* Matches the container's border-radius for consistent styling */
+}
+
 .gallery-nav {
   background-color: transparent; /* Remove background */
   color: #ffffff; /* Set arrow color to white */
