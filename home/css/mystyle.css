@@ -51,6 +51,20 @@ body {
   margin: 20px 0;
 }
 
+.social-icons .icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.social-icons .icon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
 .social-icons .icon img {
   width: 50px;
   height: 50px;
@@ -72,26 +86,8 @@ body {
   padding: 20px;
 }
 
-/* About Section */
-.about-section {
-  flex: 1;
-  background-color: #1e1e1e;
-  border: 1px solid #3c3f41;
-  border-radius: 5px;
-  padding: 20px;
-  overflow-y: auto;
-  max-height: 500px;
-}
-
-.about-section .about-gif {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: cover;
-}
-
 /* Gallery Section */
-.gallery, .animation-demos {
+.gallery, .demo-container {
   flex: 1;
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
@@ -100,22 +96,11 @@ body {
   text-align: center;
 }
 
-.gallery-container, .demo-container {
+.gallery-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.gallery-display, .demo-display {
-  width: 300px;
-  height: 200px;
-  background-color: #333333;
-  border: 1px solid #555555;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .gallery-display img, .demo-display img {
@@ -125,28 +110,23 @@ body {
 }
 
 .gallery-nav, .demo-nav {
-  background-color: transparent;
-  color: #ffffff;
   font-size: 2rem;
+  background: transparent;
   border: none;
+  color: #fff;
   cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s;
 }
 
 .gallery-nav:hover, .demo-nav:hover {
-  color: #aaaaaa;
   transform: scale(1.2);
 }
 
-.gallery-nav:focus, .demo-nav:focus {
-  outline: none;
-}
-
-/* Comments */
-.comment-box {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #1e1e1e;
-  border: 1px solid #3c3f41;
+textarea, button {
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
   border-radius: 5px;
 }

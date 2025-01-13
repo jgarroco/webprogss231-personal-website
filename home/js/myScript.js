@@ -1,63 +1,107 @@
-// Gallery for Pictures
-const galleryImages = [
-    "images/image.jpg", 
-    "images/image1.jpg",
-    "images/image2.jpg",
-    "images/image3.jpg",
-  ];
+// Picture Gallery Component
+const PictureGallery = {
+    template: `
+      <div class="gallery">
+        <h2>Picture Gallery</h2>
+        <div class="gallery-container">
+          <button @click="prevImage" class="gallery-nav">&lt;</button>
+          <div class="gallery-display">
+            <img :src="images[currentIndex]" alt="Gallery Image">
+          </div>
+          <button @click="nextImage" class="gallery-nav">&gt;</button>
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        images: [
+          'images/image1.jpg',
+          'images/image2.jpg',
+          'images/image3.jpg'
+        ],
+        currentIndex: 0
+      };
+    },
+    methods: {
+      prevImage() {
+        this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+      },
+      nextImage() {
+        this.currentIndex = (this.currentIndex + 1) % this.images.length;
+      }
+    }
+  };
   
-  let currentIndex = 0;
-  const galleryDisplay = document.querySelector(".gallery-display");
+  // Survey Form Component
+  const SurveyForm = {
+    template: `
+      <div class="comment-box">
+        <h2>Guestbook</h2>
+        <textarea v-model="comment" placeholder="Leave your comment..."></textarea>
+        <button @click="submitComment">Submit</button>
+        <div v-if="comments.length">
+          <h3>Previous Comments:</h3>
+          <ul>
+            <li v-for="(comment, index) in comments" :key="index">{{ comment }}</li>
+          </ul>
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        comment: '',
+        comments: []
+      };
+    },
+    methods: {
+      submitComment() {
+        if (this.comment.trim()) {
+          this.comments.push(this.comment);
+          this.comment = '';
+        } else {
+          alert("Please write a comment before submitting!");
+        }
+      }
+    }
+  };
   
-  function updateGalleryImage() {
-    galleryDisplay.innerHTML = `<img src="${galleryImages[currentIndex]}" alt="Gallery Image">`;
-  }
+  // Demo Gallery Component
+  const DemoGallery = {
+    template: `
+      <div class="gallery demo-container">
+        <div class="gallery-container">
+          <button @click="prevGif" class="demo-nav">&lt;</button>
+          <div class="demo-display">
+            <img :src="gifs[currentGif]" alt="Demo GIF">
+          </div>
+          <button @click="nextGif" class="demo-nav">&gt;</button>
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        gifs: ['gifs/demo1.gif', 'gifs/demo2.gif', 'gifs/demo3.gif'],
+        currentGif: 0
+      };
+    },
+    methods: {
+      prevGif() {
+        this.currentGif = (this.currentGif - 1 + this.gifs.length) % this.gifs.length;
+      },
+      nextGif() {
+        this.currentGif = (this.currentGif + 1) % this.gifs.length;
+      }
+    }
+  };
   
-  document.querySelector(".gallery-nav.left").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    updateGalleryImage();
-  });
-  
-  document.querySelector(".gallery-nav.right").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % galleryImages.length;
-    updateGalleryImage();
-  });
-  
-  updateGalleryImage();
-  
-  // Gallery for Animation Demos
-  const demoGifs = [
-    "gifs/animation1.gif", 
-    "gifs/animation2.gif", 
-  ];
-  
-  let demoIndex = 0;
-  const demoDisplay = document.querySelector(".demo-display");
-  
-  function updateDemoGif() {
-    demoDisplay.innerHTML = `<img src="${demoGifs[demoIndex]}" alt="Animation Demo">`;
-  }
-  
-  document.querySelector(".demo-nav.left").addEventListener("click", () => {
-    demoIndex = (demoIndex - 1 + demoGifs.length) % demoGifs.length;
-    updateDemoGif();
-  });
-  
-  document.querySelector(".demo-nav.right").addEventListener("click", () => {
-    demoIndex = (demoIndex + 1) % demoGifs.length;
-    updateDemoGif();
-  });
-  
-  updateDemoGif();
-  
-  // Comment Box
-  document.querySelector(".comment-box button").addEventListener("click", () => {
-    const comment = document.querySelector(".comment-box textarea").value;
-    if (comment.trim() === "") {
-      alert("Please enter a comment!");
-    } else {
-      alert("Thank you for your comment!");
-      document.querySelector(".comment-box textarea").value = "";
+  // Vue App
+  const app = Vue.createApp({
+    components: {
+      PictureGallery,
+      SurveyForm,
+      DemoGallery
     }
   });
+  
+  app.mount('#app');
   

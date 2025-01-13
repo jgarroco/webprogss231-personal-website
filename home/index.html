@@ -5,65 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin's Space</title>
     <link rel="stylesheet" href="css/mystyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 </head>
 <body>
-    <header class="header">
-        <img src="Untitled-1.gif" alt="Heading GIF" class="header-gif">
-    </header>
+    <div id="app">
+        <header class="header">
+            <img src="Untitled-1.gif" alt="Heading GIF" class="header-gif">
+        </header>
 
-    <section class="social-icons">
-        <!-- Steam Icon -->
-        <a href="https://steamcommunity.com/id/3eu6/" class="icon steam" title="Steam" target="_blank">
-          <img src="steam.png" alt="Steam">
-        </a>
-      
-        <!-- Instagram Icon -->
-        <a href="https://www.instagram.com/bry.denj/" class="icon instagram" title="Instagram" target="_blank">
-          <img src="insta_icon.png" alt="Instagram">
-        </a>
-      
-        <!-- GitHub Icon -->
-        <a href="https://github.com/jgarroco" class="icon github" title="GitHub" target="_blank">
-          <img src="github_icon.png" alt="GitHub">
-        </a>
-    </section>
-      
-    <section class="main-content">
-        <div class="content-container">
-            <div class="about-section">
-                <img src="Untitled-2.gif" alt="About Me GIF" class="about-gif">
+        <section class="social-icons">
+            <!-- Steam Icon -->
+            <a href="https://steamcommunity.com/id/3eu6/" class="icon steam" title="Steam" target="_blank">
+              <img src="steam.png" alt="Steam">
+            </a>
+          
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/bry.denj/" class="icon instagram" title="Instagram" target="_blank">
+              <img src="insta_icon.png" alt="Instagram">
+            </a>
+          
+            <!-- GitHub Icon -->
+            <a href="https://github.com/jgarroco" class="icon github" title="GitHub" target="_blank">
+              <img src="github_icon.png" alt="GitHub">
+            </a>
+        </section>
+          
+        <section class="main-content">
+            <div class="content-container">
+                <picture-gallery></picture-gallery>
+                <survey-form></survey-form>
             </div>
+        </section>
 
-            <div class="gallery">
-                <h2>Picture Gallery</h2>
-                <div class="gallery-container">
-                    <button class="gallery-nav left">&lt;</button>
-                    <div class="gallery-display">
-
-                    </div>
-                    <button class="gallery-nav right">&gt;</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="animation-demos">
-        <h2>Animation Demos</h2>
-        <div class="demo-container">
-            <button class="demo-nav left">&lt;</button>
-            <div class="demo-display">
-                
-            </div>
-            <button class="demo-nav right">&gt;</button>
-        </div>
-    </section>
-
-    <section class="comment-box">
-        <h2>Comments</h2>
-        <textarea placeholder="Leave your comment here..."></textarea>
-        <button>Submit</button>
-    </section>
-
+        <section class="animation-demos">
+            <h2>Animation Demos</h2>
+            <demo-gallery></demo-gallery>
+        </section>
+    </div>
     <script src="js/myScript.js"></script>
 </body>
 </html>
