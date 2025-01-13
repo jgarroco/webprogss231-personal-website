@@ -2,7 +2,7 @@
 .content-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch; /* Stretch sections to the same height */
   width: 95%;
   max-width: 1400px;
   gap: 30px;
@@ -17,12 +17,12 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
-  height: 500px; /* Fixed height */
-  max-height: 500px; /* Prevent overflow */
-  overflow-y: auto; /* Add scrolling for overflow */
+  height: 500px; /* Fixed height to match the Picture Gallery */
+  max-height: 500px; /* Prevent it from becoming too large */
+  overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 .about-section h2 {
@@ -44,7 +44,7 @@
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
-  height: 500px; /* Match the "About Me" section height */
+  height: 500px; /* Same height as About Me */
 }
 
 .gallery h2 {
