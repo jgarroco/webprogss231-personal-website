@@ -1,11 +1,18 @@
+/* Import VCR OSD Mono font */
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('./fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Ensure correct path to the font */
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* General body styling */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', monospace;
+  font-family: 'VCR OSD Mono', monospace; /* Use VCR OSD Mono, fallback to monospace */
   background: linear-gradient(180deg, #000000, #1a1a1a);
   color: #ffffff;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,34 +22,43 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  border: 2px solid #ffffff; /* White border for the header */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+}
+
+.header:hover {
+  transform: scale(1.02); /* Slight enlargement on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
 }
 
 .header-gif {
-  width: auto;
   max-width: 100%;
-  height: 250px;
-  border: 5px solid #ffffff;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;
-  padding: 20px;
   gap: 15px;
+  margin: 20px 0;
 }
 
 .social-icons .icon img {
-  width: 60px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   transition: transform 0.2s;
-  filter: invert(100%);
+}
+
+.social-icons .icon img.instagram {
+  width: 45px; /* Slightly larger Instagram logo */
+  height: 40px; /* Keep height uniform */
 }
 
 .social-icons .icon img:hover {
@@ -53,134 +69,79 @@ body {
 .content-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  width: 95%; /* Increased width */
-  max-width: 1400px;
-  gap: 30px;
-  margin: 30px 0;
+  align-items: stretch;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* About Section */
 .about-section {
-  flex: 3; /* Larger width */
+  flex: 1;
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 600px; /* Larger height */
-  overflow: hidden;
-  padding: 10px;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 500px;
 }
 
 .about-section .about-gif {
-  width: 100%; /* Make the GIF larger */
-  height: 100%; /* Scale to fit the section */
-  object-fit: cover; /* Ensure the GIF fits nicely */
-  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 /* Gallery Section */
 .gallery {
-  flex: 4; /* Larger width compared to "About Me" */
-  text-align: center;
+  flex: 1;
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-  padding: 30px;
-  height: 600px; /* Match the "About Me" height */
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  color: #ffffff;
-  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
 .gallery-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .gallery-display {
-  width: 400px; /* Increased width */
-  height: 300px; /* Increased height */
+  width: 300px;
+  height: 200px;
   background-color: #333333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
   border: 1px solid #555555;
 }
 
+/* Navigation Buttons for Gallery */
 .gallery-nav {
-  font-size: 1.5rem;
-  padding: 15px 25px;
-  cursor: pointer;
-  border: none;
-  background-color: #333333;
-  color: #ffffff;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  background-color: transparent; /* Remove background */
+  color: #ffffff; /* Set arrow color to white */
+  font-size: 2rem; /* Increase arrow size */
+  border: none; /* Remove button borders */
+  cursor: pointer; /* Show pointer on hover */
+  transition: transform 0.2s ease, color 0.2s ease; /* Add smooth hover effect */
 }
 
 .gallery-nav:hover {
-  background-color: #444444;
+  color: #aaaaaa; /* Subtle color change on hover */
+  transform: scale(1.2); /* Slightly enlarge arrow on hover */
 }
 
-/* Animation Demos */
-.animation-demos {
+.gallery-nav:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Animation Demos and Comments */
+.animation-demos, .comment-box {
+  margin-top: 20px;
   padding: 20px;
   background-color: #1e1e1e;
-  margin: 20px;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-}
-
-.animation-demos h2 {
-  color: #ffffff;
-}
-
-/* Comment Box */
-.comment-box {
-  padding: 20px;
-  background-color: #1e1e1e;
-  margin: 20px;
-  border: 1px solid #3c3f41;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.comment-box h2 {
-  color: #ffffff;
-}
-
-.comment-box textarea {
-  width: 90%;
-  height: 100px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #555555;
-  padding: 10px;
-  font-size: 1rem;
-  background-color: #333333;
-  color: #ffffff;
-}
-
-.comment-box button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #444444;
-  color: #ffffff;
-  border: 1px solid #555555;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.comment-box button:hover {
-  background-color: #555555;
 }
