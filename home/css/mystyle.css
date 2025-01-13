@@ -14,12 +14,13 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
   border: 2px solid #ffffff; /* White border for the header */
   border-radius: 10px; /* Rounded corners */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+  margin-top: 20px;
 }
 
 .header:hover {
@@ -108,6 +109,25 @@ body {
   height: 200px;
   background-color: #333333;
   border: 1px solid #555555;
+}
+
+/* Navigation Buttons for Gallery */
+.gallery-nav {
+  background-color: transparent; /* Remove background */
+  color: #ffffff; /* Set arrow color to white */
+  font-size: 2rem; /* Increase arrow size */
+  border: none; /* Remove button borders */
+  cursor: pointer; /* Show pointer on hover */
+  transition: transform 0.2s ease, color 0.2s ease; /* Add smooth hover effect */
+}
+
+.gallery-nav:hover {
+  color: #aaaaaa; /* Subtle color change on hover */
+  transform: scale(1.2); /* Slightly enlarge arrow on hover */
+}
+
+.gallery-nav:focus {
+  outline: none; /* Remove focus outline */
 }
 
 /* Animation Demos and Comments */
