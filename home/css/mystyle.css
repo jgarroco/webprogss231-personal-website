@@ -50,20 +50,30 @@ body {
   margin: 20px 0;
 }
 
-.social-icons .icon img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s;
+.social-icons .icon {
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  padding: 10px; /* Add some padding */
+  border-radius: 50%; /* Circular background */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle glow */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border */
 }
 
-.social-icons .icon img.instagram {
-  width: 45px; /* Slightly larger Instagram logo */
-  height: 40px; /* Keep height uniform */
+.social-icons .icon:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Bright background on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Brighter glow on hover */
+}
+
+.social-icons .icon img {
+  width: 50px; /* Larger size */
+  height: 50px;
+  transition: transform 0.2s ease; /* Smooth hover scaling */
 }
 
 .social-icons .icon img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2); /* Slight enlargement on hover */
 }
+
 
 /* Main Content Layout */
 .content-container {
