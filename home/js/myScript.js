@@ -1,26 +1,27 @@
-// Adjust canvas size dynamically
-function resizeCanvas() {
-  const canvas = document.getElementById("drawingCanvas");
-  canvas.width = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
-}
+// Gallery Navigation
+let currentIndex = 0;
+const galleryDisplay = document.querySelector('.gallery-display');
 
-window.onload = resizeCanvas;
-window.addEventListener("resize", resizeCanvas);
+document.querySelector('.gallery-nav.left').addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+    galleryDisplay.textContent = `Image ${currentIndex + 1}`;
+});
 
-// Add fixes to drawing functionality
-canvas.addEventListener("mousedown", startDrawing);
-canvas.addEventListener("mouseup", stopDrawing);
-canvas.addEventListener("mousemove", draw);
+document.querySelector('.gallery-nav.right').addEventListener('click', () => {
+    currentIndex += 1; // Placeholder for gallery navigation logic
+    galleryDisplay.textContent = `Image ${currentIndex + 1}`;
+});
 
-// Improved undo and redo
-document.getElementById("undo").addEventListener("click", undo);
-document.getElementById("redo").addEventListener("click", redo);
+// Animation demos placeholder
+console.log('Animation demos script loaded');
 
-// Add fade-in effect with delay
-window.addEventListener("load", () => {
-  const sections = document.querySelectorAll("section");
-  sections.forEach((section, index) => {
-    section.style.animationDelay = `${index * 0.3}s`; // Add staggered delays
-  });
+// Comment box submission logic
+document.querySelector('.comment-box button').addEventListener('click', () => {
+    const comment = document.querySelector('.comment-box textarea').value;
+    if (comment.trim() === "") {
+        alert("Please enter a comment!");
+    } else {
+        alert("Thank you for your comment!");
+        document.querySelector('.comment-box textarea').value = "";
+    }
 });
