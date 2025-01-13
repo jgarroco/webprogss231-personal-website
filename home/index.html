@@ -5,40 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin's Space</title>
     <link rel="stylesheet" href="css/mystyle.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script> <!-- Include Vue.js -->
 </head>
 <body>
-    <div id="app">
-        <header class="header">
-            <img src="Untitled-1.gif" alt="Heading GIF" class="header-gif">
-        </header>
+    <header class="header">
+        <img src="Untitled-1.gif" alt="Heading GIF" class="header-gif">
+    </header>
 
-        <section class="social-icons">
-            <a href="https://steamcommunity.com/id/3eu6/" class="icon steam" title="Steam" target="_blank">
-                <img src="steam.png" alt="Steam">
-            </a>
-            <a href="https://www.instagram.com/bry.denj/" class="icon instagram" title="Instagram" target="_blank">
-                <img src="insta_icon.png" alt="Instagram">
-            </a>
-            <a href="https://github.com/jgarroco" class="icon github" title="GitHub" target="_blank">
-                <img src="github_icon.png" alt="GitHub">
-            </a>
-        </section>
-
-        <section class="main-content">
-            <div class="content-container">
-                <div class="about-section">
-                    <img src="Untitled-2.gif" alt="About Me GIF" class="about-gif">
-                </div>
-                <picture-gallery></picture-gallery>
+    <section class="social-icons">
+        <!-- Steam Icon -->
+        <a href="https://steamcommunity.com/id/3eu6/" class="icon steam" title="Steam" target="_blank">
+          <img src="steam.png" alt="Steam">
+        </a>
+      
+        <!-- Instagram Icon -->
+        <a href="https://www.instagram.com/bry.denj/" class="icon instagram" title="Instagram" target="_blank">
+          <img src="insta_icon.png" alt="Instagram">
+        </a>
+      
+        <!-- GitHub Icon -->
+        <a href="https://github.com/jgarroco" class="icon github" title="GitHub" target="_blank">
+          <img src="github_icon.png" alt="GitHub">
+        </a>
+      </section>
+      
+    <section class="main-content">
+        <div class="content-container">
+            <div class="about-section">
+                <img src="Untitled-2.gif" alt="About Me GIF" class="about-gif">
             </div>
-        </section>
 
-        <section class="animation-demos">
-            <h2>Animation Demos</h2>
-            <demo-gallery></demo-gallery>
-        </section>
-    </div>
+            <div id="gallery-app" class="gallery">
+                <h2>Picture Gallery</h2>
+                <div class="gallery-container">
+                    <button class="gallery-nav left" @click="prevImage">&lt;</button>
+                    <div class="gallery-display">
+                        <img :src="images[currentImage]" alt="Gallery Image">
+                    </div>
+                    <button class="gallery-nav right" @click="nextImage">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="animation-app" class="animation-demos">
+        <h2>Animation Demos</h2>
+        <div class="gallery-container">
+            <button class="gallery-nav left" @click="prevGif">&lt;</button>
+            <div class="gallery-display">
+                <img :src="gifs[currentGif]" alt="Demo GIF">
+            </div>
+            <button class="gallery-nav right" @click="nextGif">&gt;</button>
+        </div>
+    </section>
+
+    <section id="guestbook-app" class="comment-box">
+        <h2>Guestbook</h2>
+        <textarea v-model="newComment" placeholder="Leave your comment here..."></textarea>
+        <button @click="addComment">Submit</button>
+        <h3>Previous Comments:</h3>
+        <ul>
+            <li v-for="comment in comments" :key="comment">{{ comment }}</li>
+        </ul>
+    </section>
+
     <script src="js/myScript.js"></script>
 </body>
 </html>
