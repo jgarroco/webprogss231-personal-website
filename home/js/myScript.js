@@ -1,4 +1,4 @@
-// Picture Gallery Component
+// Vue Components
 const PictureGallery = {
     template: `
       <div class="gallery">
@@ -32,40 +32,6 @@ const PictureGallery = {
     }
   };
   
-  // Survey Form Component
-  const SurveyForm = {
-    template: `
-      <div class="comment-box">
-        <h2>Guestbook</h2>
-        <textarea v-model="comment" placeholder="Leave your comment..."></textarea>
-        <button @click="submitComment">Submit</button>
-        <div v-if="comments.length">
-          <h3>Previous Comments:</h3>
-          <ul>
-            <li v-for="(comment, index) in comments" :key="index">{{ comment }}</li>
-          </ul>
-        </div>
-      </div>
-    `,
-    data() {
-      return {
-        comment: '',
-        comments: []
-      };
-    },
-    methods: {
-      submitComment() {
-        if (this.comment.trim()) {
-          this.comments.push(this.comment);
-          this.comment = '';
-        } else {
-          alert("Please write a comment before submitting!");
-        }
-      }
-    }
-  };
-  
-  // Demo Gallery Component
   const DemoGallery = {
     template: `
       <div class="gallery demo-container">
@@ -80,7 +46,7 @@ const PictureGallery = {
     `,
     data() {
       return {
-        gifs: ['gifs/demo1.gif', 'gifs/demo2.gif', 'gifs/demo3.gif'],
+        gifs: ['gifs/animation1.gif', 'gifs/danimation2.gif'],
         currentGif: 0
       };
     },
@@ -94,11 +60,9 @@ const PictureGallery = {
     }
   };
   
-  // Vue App
   const app = Vue.createApp({
     components: {
       PictureGallery,
-      SurveyForm,
       DemoGallery
     }
   });

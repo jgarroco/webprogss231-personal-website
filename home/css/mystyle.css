@@ -1,11 +1,3 @@
-/* Import VCR OSD Mono font */
-@font-face {
-  font-family: 'VCR OSD Mono';
-  src: url('./fonts/VCR_OSD_MONO.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* General body styling */
 body {
   margin: 0;
@@ -18,7 +10,7 @@ body {
   align-items: center;
 }
 
-/* Header - GIF Heading */
+/* Header */
 .header {
   text-align: center;
   padding: 20px;
@@ -75,19 +67,39 @@ body {
   transform: scale(1.2);
 }
 
-/* Main Content Layout */
+/* Content Layout */
 .content-container {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
 }
 
+/* About Section */
+.about-section {
+  flex: 1;
+  background-color: #1e1e1e;
+  border: 1px solid #3c3f41;
+  border-radius: 5px;
+  padding: 0;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-section .about-gif {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 /* Gallery Section */
-.gallery, .demo-container {
+.gallery {
   flex: 1;
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
@@ -103,13 +115,14 @@ body {
   gap: 10px;
 }
 
-.gallery-display img, .demo-display img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+.gallery-display {
+  width: 300px;
+  height: 200px;
+  background-color: #333333;
+  border: 1px solid #555555;
 }
 
-.gallery-nav, .demo-nav {
+.gallery-nav {
   font-size: 2rem;
   background: transparent;
   border: none;
@@ -118,15 +131,6 @@ body {
   transition: transform 0.2s;
 }
 
-.gallery-nav:hover, .demo-nav:hover {
+.gallery-nav:hover {
   transform: scale(1.2);
-}
-
-textarea, button {
-  padding: 10px;
-  background: #333;
-  color: #fff;
-  border: none;
-  margin-top: 10px;
-  border-radius: 5px;
 }
