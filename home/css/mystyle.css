@@ -120,6 +120,14 @@ body {
   border: 1px solid #555555;
 }
 
+.gallery-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 5px; 
+}
+
+
 .gallery-nav {
   background-color: transparent;
   color: #ffffff;
@@ -140,4 +148,43 @@ body {
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
+}
+
+.comment-box textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid #3c3f41;
+  padding: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'VCR OSD Mono', monospace;
+}
+
+.comment-box button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3c3f41;
+  color: #ffffff;
+  font-family: 'VCR OSD Mono', monospace;
+  cursor: pointer;
+}
+
+.comment-box button:hover {
+  background-color: #5c5f61;
+}
+
+.comment-box ul {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.comment-box ul li {
+  padding: 5px 10px;
+  background-color: #333333;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
