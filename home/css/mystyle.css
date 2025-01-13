@@ -1,8 +1,16 @@
+/* Import VCR OSD Mono font */
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('./fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Ensure correct path to the font */
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* General body styling */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', monospace;
+  font-family: 'VCR OSD Mono', monospace; /* Use VCR OSD Mono, fallback to monospace */
   background: linear-gradient(180deg, #000000, #1a1a1a);
   color: #ffffff;
   display: flex;
@@ -14,13 +22,12 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  width: 75%;
+  width: 100%;
   display: flex;
   justify-content: center;
   border: 2px solid #ffffff; /* White border for the header */
   border-radius: 10px; /* Rounded corners */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
-  margin-top: 20px;
 }
 
 .header:hover {
@@ -51,7 +58,7 @@ body {
 
 .social-icons .icon img.instagram {
   width: 45px; /* Slightly larger Instagram logo */
-  height: 40px; /* Keep the height uniform */
+  height: 40px; /* Keep height uniform */
 }
 
 .social-icons .icon img:hover {
