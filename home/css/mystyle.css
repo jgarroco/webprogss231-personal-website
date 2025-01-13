@@ -70,11 +70,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Ensure the section has enough height */
+    height: 350px; /* Increased height for larger GIF */
 }
 
 .about-section .about-gif {
-    width: 250px; /* Larger size for the GIF */
+    width: 300px; /* Increased size for better visibility */
     height: auto;
     border-radius: 5px;
 }
