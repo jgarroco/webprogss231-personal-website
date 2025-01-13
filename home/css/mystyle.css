@@ -1,76 +1,103 @@
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(180deg, #000000, #1a1a1a);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header - GIF Heading */
+.header {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-gif {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-icons .icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.social-icons .icon img:hover {
+  transform: scale(1.1);
+}
+
 /* Main Content Layout */
 .content-container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Stretch sections to the same height */
-  width: 95%;
-  max-width: 1400px;
-  gap: 30px;
-  margin: 30px 0;
+  align-items: stretch;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* About Section */
 .about-section {
-  flex: 3;
+  flex: 1;
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 20px;
-  height: 500px; /* Fixed height to match the Picture Gallery */
-  max-height: 500px; /* Prevent it from becoming too large */
-  overflow-y: auto; /* Allow scrolling if content overflows */
+  overflow-y: auto;
+  max-height: 500px;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin: 10px 0;
+.about-section .about-gif {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
 }
 
 /* Gallery Section */
 .gallery {
-  flex: 4;
-  text-align: center;
+  flex: 1;
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
-  height: 500px; /* Same height as About Me */
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  text-align: center;
 }
 
 .gallery-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .gallery-display {
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   background-color: #333333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
   border: 1px solid #555555;
 }
 
-/* Prevent Overlap with Sections Below */
+/* Animation Demos and Comments */
 .animation-demos, .comment-box {
   margin-top: 20px;
   padding: 20px;
