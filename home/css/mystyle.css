@@ -1,12 +1,17 @@
+/* Import VCR OSD Mono font */
+@font-face {
+  font-family: 'VCR OSD Mono';
+  src: url('./fonts/VCR_OSD_MONO.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* General body styling */
 body {
   margin: 0;
   padding: 0;
   font-family: 'VCR OSD Mono', monospace; /* Use VCR OSD Mono, fallback to monospace */
-  background-image: url('./BG.png'); /* Path to your PNG file */
-  background-size: cover; /* Cover the entire viewport */
-  background-position: center; /* Center the image */
-  background-attachment: fixed; /* Keep the background fixed during scroll */
+  background: linear-gradient(180deg, #000000, #1a1a1a);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -17,18 +22,18 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  width: 75% !important;
+  width: 75%; /* Keep the header width */
   display: flex;
   justify-content: center;
-  border: 2px solid #ffffff;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #ffffff; /* White border for the header */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
   margin-top: 20px;
 }
 
 .header:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.02); /* Slight enlargement on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
 }
 
 .header-gif {
@@ -53,8 +58,8 @@ body {
 }
 
 .social-icons .icon img.instagram {
-  width: 45px;
-  height: 40px;
+  width: 45px; /* Slightly larger Instagram logo */
+  height: 40px; /* Keep height uniform */
 }
 
 .social-icons .icon img:hover {
@@ -75,49 +80,63 @@ body {
 /* About Section */
 .about-section {
   flex: 1;
-  background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent background */
+  background-color: #1e1e1e; /* Original background */
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
   overflow-y: auto;
-  height: 300px; /* Reduce height to 300px */
+  max-height: 500px; /* Restore original height */
 }
 
 /* Gallery Section */
 .gallery {
   flex: 1;
-  background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent background */
+  background-color: #1e1e1e; /* Original background */
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
-  height: 300px; /* Reduce height to 300px */
+  max-height: 300px; /* Restore original height */
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery-display {
+  width: 300px; /* Restore original width */
+  height: 200px; /* Restore original height */
+  background-color: #333333;
+  border: 1px solid #555555;
 }
 
 /* Navigation Buttons for Gallery */
 .gallery-nav {
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 2rem;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
+  background-color: transparent; /* Remove background */
+  color: #ffffff; /* Set arrow color to white */
+  font-size: 2rem; /* Increase arrow size */
+  border: none; /* Remove button borders */
+  cursor: pointer; /* Show pointer on hover */
+  transition: transform 0.2s ease, color 0.2s ease; /* Add smooth hover effect */
 }
 
 .gallery-nav:hover {
-  color: #aaaaaa;
-  transform: scale(1.2);
+  color: #aaaaaa; /* Subtle color change on hover */
+  transform: scale(1.2); /* Slightly enlarge arrow on hover */
 }
 
 .gallery-nav:focus {
-  outline: none;
+  outline: none; /* Remove focus outline */
 }
 
 /* Animation Demos and Comments */
 .animation-demos, .comment-box {
   margin-top: 20px;
   padding: 20px;
-  background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent background */
+  background-color: #1e1e1e; /* Original background */
   border: 1px solid #3c3f41;
   border-radius: 5px;
 }
