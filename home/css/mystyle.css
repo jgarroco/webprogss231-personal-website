@@ -66,7 +66,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Main Content Layout */
 .content-container {
   display: flex;
   justify-content: space-between;
@@ -77,16 +76,19 @@ body {
   padding: 20px;
 }
 
-/* About Section */
+
 .about-section {
   flex: 1;
   background-color: #1e1e1e; /* Background for visibility */
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
-  height: 300px; /* Set consistent height */
-  overflow-y: auto; /* Add scrollbar only when needed */
+  height: 300px; /* Ensure height matches design */
+  width: 100%; /* Ensure it does not exceed its container */
+  overflow-y: auto; /* Add scroll only for vertical overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 
 /* Gallery Section */
 .gallery {
