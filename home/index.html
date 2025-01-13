@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin's Space</title>
     <link rel="stylesheet" href="css/mystyle.css">
+    <style>
+        /* Inline debug CSS to ensure full control */
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 400px; /* Explicitly set height for debugging */
+            background-color: #1e1e1e;
+            border: 1px solid #3c3f41;
+            border-radius: 5px;
+            overflow: hidden; /* Prevent overflow issues */
+        }
+
+        .about-section .about-gif {
+            width: 100%; /* Full width of container */
+            height: 100%; /* Full height of container */
+            object-fit: cover; /* Ensures the GIF fills the space */
+            display: block; /* Make it display as a block element */
+        }
+    </style>
 </head>
 <body>
     <header class="header">
