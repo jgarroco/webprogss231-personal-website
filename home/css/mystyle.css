@@ -84,11 +84,11 @@ body {
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
-  height: 300px;
-  width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  word-wrap: break-word;
+  height: 300px; /* Fixed height */
+  overflow-y: auto; /* Add vertical scrolling if content exceeds height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box; /* Ensure padding doesn't exceed boundaries */
+  word-wrap: break-word; /* Ensure long text wraps */
 }
 
 /* Gallery Section */
@@ -99,7 +99,8 @@ body {
   border-radius: 5px;
   padding: 20px;
   text-align: center;
-  height: 300px;
+  height: 300px; /* Fixed height */
+  box-sizing: border-box; /* Ensure padding doesn't exceed boundaries */
 }
 
 /* Gallery Container */
