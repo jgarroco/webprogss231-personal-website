@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'VCR OSD Mono', monospace; /* Use VCR OSD Mono, fallback to monospace */
+  font-family: 'VCR OSD Mono', monospace;
   background: linear-gradient(180deg, #000000, #1a1a1a);
   color: #ffffff;
   display: flex;
@@ -18,22 +18,22 @@ body {
   align-items: center;
 }
 
-/* Header - GIF Heading */
+/* Header */
 .header {
   text-align: center;
   padding: 20px;
-  width: 75%; /* Keep the header width */
+  width: 75%;
   display: flex;
   justify-content: center;
-  border: 2px solid #ffffff; /* White border for the header */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 20px;
 }
 
 .header:hover {
-  transform: scale(1.02); /* Slight enlargement on hover */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .header-gif {
@@ -58,14 +58,15 @@ body {
 }
 
 .social-icons .icon img.instagram {
-  width: 45px; /* Slightly larger Instagram logo */
-  height: 40px; /* Keep height uniform */
+  width: 45px;
+  height: 40px;
 }
 
 .social-icons .icon img:hover {
   transform: scale(1.1);
 }
 
+/* Main Content Layout */
 .content-container {
   display: flex;
   justify-content: space-between;
@@ -76,29 +77,29 @@ body {
   padding: 20px;
 }
 
-
+/* About Section */
 .about-section {
   flex: 1;
-  background-color: #1e1e1e; /* Background for visibility */
+  background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
-  height: 300px; /* Ensure height matches design */
-  width: 100%; /* Ensure it does not exceed its container */
-  overflow-y: auto; /* Add scroll only for vertical overflow */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 300px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
-
 
 /* Gallery Section */
 .gallery {
   flex: 1;
-  background-color: #1e1e1e; /* Background for visibility */
+  background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
-  height: 300px; /* Match height with the About Me section */
+  height: 300px;
 }
 
 /* Gallery Container */
@@ -110,36 +111,36 @@ body {
 }
 
 .gallery-display {
-  width: 300px; /* Restore original width */
-  height: 200px; /* Restore original height */
+  width: 300px;
+  height: 200px;
   background-color: #333333;
   border: 1px solid #555555;
 }
 
 /* Navigation Buttons for Gallery */
 .gallery-nav {
-  background-color: transparent; /* Remove background */
-  color: #ffffff; /* Set arrow color to white */
-  font-size: 2rem; /* Increase arrow size */
-  border: none; /* Remove button borders */
-  cursor: pointer; /* Show pointer on hover */
-  transition: transform 0.2s ease, color 0.2s ease; /* Add smooth hover effect */
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .gallery-nav:hover {
-  color: #aaaaaa; /* Subtle color change on hover */
-  transform: scale(1.2); /* Slightly enlarge arrow on hover */
+  color: #aaaaaa;
+  transform: scale(1.2);
 }
 
 .gallery-nav:focus {
-  outline: none; /* Remove focus outline */
+  outline: none;
 }
 
 /* Animation Demos and Comments */
 .animation-demos, .comment-box {
   margin-top: 20px;
   padding: 20px;
-  background-color: #1e1e1e; /* Original background */
+  background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
 }
