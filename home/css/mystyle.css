@@ -19,7 +19,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
 }
 
 .header-gif {
@@ -73,7 +72,7 @@ body {
 .about-section h2 {
     font-size: 2rem;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .about-section p {
@@ -94,6 +93,13 @@ body {
 
 .about-section .more-info:hover {
     background-color: #444444;
+}
+
+.about-section .about-gif {
+    width: 80px; /* Smaller size for the GIF */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 /* Gallery Section */
