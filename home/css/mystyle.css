@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', monospace;
-    background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+    background: linear-gradient(180deg, #000000, #1a1a1a);
     color: #ffffff;
     min-height: 100vh;
     display: flex;
