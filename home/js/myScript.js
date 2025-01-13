@@ -23,7 +23,7 @@ const animationApp = Vue.createApp({
     data() {
         return {
             currentGif: 0,
-            gifs: ['gifs/gif1.gif', 'gifs/gif2.gif', 'gifs/gif3.gif']
+            gifs: ['gifs/animation1.gif', 'gifs/animation2.gif']
         };
     },
     methods: {
