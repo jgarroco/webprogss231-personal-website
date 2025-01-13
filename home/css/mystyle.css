@@ -80,25 +80,26 @@ body {
 /* About Section */
 .about-section {
   flex: 1;
-  background-color: #1e1e1e; /* Original background */
+  background-color: #1e1e1e; /* Background for visibility */
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
-  overflow-y: auto;
-  max-height: 500px; /* Restore original height */
+  height: 300px; /* Set consistent height */
+  overflow-y: auto; /* Add scrollbar only when needed */
 }
 
 /* Gallery Section */
 .gallery {
   flex: 1;
-  background-color: #1e1e1e; /* Original background */
+  background-color: #1e1e1e; /* Background for visibility */
   border: 1px solid #3c3f41;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
-  max-height: 300px; /* Restore original height */
+  height: 300px; /* Match height with the About Me section */
 }
 
+/* Gallery Container */
 .gallery-container {
   display: flex;
   justify-content: center;
