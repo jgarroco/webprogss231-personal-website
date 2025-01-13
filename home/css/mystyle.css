@@ -19,15 +19,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: transparent;
 }
 
 .header-gif {
     width: auto;
     max-width: 100%;
-    height: 250px; /* Size of the GIF */
+    height: 250px; /* Increased size */
     border: 5px solid #ffffff; /* White border around the GIF */
-    border-radius: 10px; /* Rounded corners for a smooth, aesthetic look */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
 }
 
 /* Social Icons */
