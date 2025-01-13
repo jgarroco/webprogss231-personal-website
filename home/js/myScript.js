@@ -1,38 +1,56 @@
-// Gallery Navigation
+// Gallery for Pictures
 const galleryImages = [
-    "images/image1.jpg", // Replace these paths with your actual images
+    "images/image.jpg", 
+    "images/image1.jpg",
     "images/image2.jpg",
     "images/image3.jpg",
-    "images/image4.jpg",
   ];
   
   let currentIndex = 0;
   const galleryDisplay = document.querySelector(".gallery-display");
   
-  // Update the displayed image
   function updateGalleryImage() {
-    galleryDisplay.innerHTML = `<img src="${galleryImages[currentIndex]}" alt="Gallery Image" class="gallery-image">`;
+    galleryDisplay.innerHTML = `<img src="${galleryImages[currentIndex]}" alt="Gallery Image">`;
   }
   
-  // Left Button Click
   document.querySelector(".gallery-nav.left").addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
     updateGalleryImage();
   });
   
-  // Right Button Click
   document.querySelector(".gallery-nav.right").addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % galleryImages.length;
     updateGalleryImage();
   });
   
-  // Initialize the gallery with the first image
   updateGalleryImage();
   
-  // Animation demos placeholder
-  console.log("Animation demos script loaded");
+  // Gallery for Animation Demos
+  const demoGifs = [
+    "gifs/animation1.gif", 
+    "gifs/animation2.gif", 
+  ];
   
-  // Comment box submission logic
+  let demoIndex = 0;
+  const demoDisplay = document.querySelector(".demo-display");
+  
+  function updateDemoGif() {
+    demoDisplay.innerHTML = `<img src="${demoGifs[demoIndex]}" alt="Animation Demo">`;
+  }
+  
+  document.querySelector(".demo-nav.left").addEventListener("click", () => {
+    demoIndex = (demoIndex - 1 + demoGifs.length) % demoGifs.length;
+    updateDemoGif();
+  });
+  
+  document.querySelector(".demo-nav.right").addEventListener("click", () => {
+    demoIndex = (demoIndex + 1) % demoGifs.length;
+    updateDemoGif();
+  });
+  
+  updateDemoGif();
+  
+  // Comment Box
   document.querySelector(".comment-box button").addEventListener("click", () => {
     const comment = document.querySelector(".comment-box textarea").value;
     if (comment.trim() === "") {

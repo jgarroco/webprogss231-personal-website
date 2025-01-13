@@ -1,7 +1,7 @@
 /* Import VCR OSD Mono font */
 @font-face {
   font-family: 'VCR OSD Mono';
-  src: url('./fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Ensure correct path to the font */
+  src: url('./fonts/VCR_OSD_MONO.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'VCR OSD Mono', monospace; /* Use VCR OSD Mono, fallback to monospace */
+  font-family: 'VCR OSD Mono', monospace;
   background: linear-gradient(180deg, #000000, #1a1a1a);
   color: #ffffff;
   display: flex;
@@ -25,15 +25,15 @@ body {
   width: 75%;
   display: flex;
   justify-content: center;
-  border: 2px solid #ffffff; /* White border for the header */
-  border-radius: 10px; /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 20px;
 }
 
 .header:hover {
-  transform: scale(1.02); /* Slight enlargement on hover */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .header-gif {
@@ -51,28 +51,14 @@ body {
   margin: 20px 0;
 }
 
-.social-icons .icon {
-  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
-  padding: 10px; /* Add some padding */
-  border-radius: 50%; /* Circular background */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle glow */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border */
-}
-
-.social-icons .icon:hover {
-  background-color: rgba(255, 255, 255, 0.3); /* Bright background on hover */
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); /* Brighter glow on hover */
-}
-
 .social-icons .icon img {
-  width: 50px; /* Larger size */
+  width: 50px;
   height: 50px;
-  transition: transform 0.2s ease; /* Smooth hover scaling */
+  transition: transform 0.2s ease;
 }
 
 .social-icons .icon img:hover {
-  transform: scale(1.2); /* Slight enlargement on hover */
+  transform: scale(1.2);
 }
 
 /* Main Content Layout */
@@ -105,7 +91,7 @@ body {
 }
 
 /* Gallery Section */
-.gallery {
+.gallery, .animation-demos {
   flex: 1;
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
@@ -114,14 +100,14 @@ body {
   text-align: center;
 }
 
-.gallery-container {
+.gallery-container, .demo-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.gallery-display {
+.gallery-display, .demo-display {
   width: 300px;
   height: 200px;
   background-color: #333333;
@@ -132,32 +118,32 @@ body {
   overflow: hidden;
 }
 
-.gallery-display img {
+.gallery-display img, .demo-display img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-.gallery-nav {
-  background-color: transparent; /* Remove background */
-  color: #ffffff; /* Set arrow color to white */
-  font-size: 2rem; /* Increase arrow size */
-  border: none; /* Remove button borders */
-  cursor: pointer; /* Show pointer on hover */
-  transition: transform 0.2s ease, color 0.2s ease; /* Add smooth hover effect */
+.gallery-nav, .demo-nav {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.gallery-nav:hover {
-  color: #aaaaaa; /* Subtle color change on hover */
-  transform: scale(1.2); /* Slightly enlarge arrow on hover */
+.gallery-nav:hover, .demo-nav:hover {
+  color: #aaaaaa;
+  transform: scale(1.2);
 }
 
-.gallery-nav:focus {
-  outline: none; /* Remove focus outline */
+.gallery-nav:focus, .demo-nav:focus {
+  outline: none;
 }
 
-/* Animation Demos and Comments */
-.animation-demos, .comment-box {
+/* Comments */
+.comment-box {
   margin-top: 20px;
   padding: 20px;
   background-color: #1e1e1e;
