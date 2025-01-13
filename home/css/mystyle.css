@@ -1,80 +1,109 @@
-/* General styles for the body */
+/* General body styling */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-color: #f9fafc;
 }
 
-/* Card styling */
-.card {
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+/* Header - Welcome Message */
+.welcome-message {
     text-align: center;
-    max-width: 500px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }
 
-/* Heading styling */
-.card h1 {
-    font-size: 2em;
-    margin: 0 0 10px;
-    color: #333;
-    font-family: 'Georgia', serif; /* More elegant font for the header */
+.welcome-message h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-/* Subtext styling */
-.card p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif;
-    font-style: italic;
-}
-
-/* Social links container */
-.social-links {
+/* Social Icons */
+.social-icons {
     display: flex;
     justify-content: center;
+    padding: 20px;
     gap: 15px;
 }
 
-/* Social button styling */
-.social {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 0.9em;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: transform 0.2s, box-shadow 0.2s;
+.social-icons .icon img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
 }
 
-/* Hover effect for buttons */
-.social:hover {
+.social-icons .icon img:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Colors for each button */
-.social.etsy {
-    background: #fdd6ba;
+/* About Section */
+.about-section {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
-.social.youtube {
-    background: #ff7676;
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.social.instagram {
-    background: #a4d3a7;
+.about-section p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
-.social.github {
-    background: #c3e9fa;
+.about-section .more-info {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+.about-section .more-info:hover {
+    background-color: #0056b3;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 20px;
+    background-color: #e9ecef;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery-display {
+    width: 300px;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 2px solid #333;
+}
+
+.gallery-nav {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.gallery-nav:hover {
+    background-color
