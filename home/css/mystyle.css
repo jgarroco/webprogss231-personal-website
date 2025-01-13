@@ -59,16 +59,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 350px; /* Ensure the section has enough height */
+    height: 100%; /* Make it take up full height */
+    max-height: 400px; /* Ensure the container doesn't shrink */
+    width: 100%; /* Take up full width of its container */
     overflow: hidden; /* Prevent overflow issues */
 }
 
 .about-section .about-gif {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    object-fit: contain; /* Adjust the GIF to fit the section without cropping */
+    object-fit: fill; /* Ensure the GIF fills the container */
     display: block; /* Ensure it's displayed properly */
+    max-height: 400px; /* Limit GIF height to container's max height */
 }
+
 
 /* Gallery Section */
 .gallery {
