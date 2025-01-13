@@ -3,7 +3,7 @@ const galleryApp = Vue.createApp({
     data() {
         return {
             currentImage: 0,
-            images: ['images/image1.jpg', 'images/image2.jpg', 'images/image3.jpg']
+            images: ['images/image1.jpg', 'images/image2.jpg', 'images/image.jpg']
         };
     },
     methods: {
