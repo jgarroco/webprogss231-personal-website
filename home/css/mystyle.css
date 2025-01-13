@@ -22,7 +22,7 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
   border: 2px solid #ffffff; /* White border for the header */
