@@ -1,11 +1,3 @@
-/* Import VCR OSD Mono font */
-@font-face {
-  font-family: 'VCR OSD Mono';
-  src: url('./fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Ensure correct path to the font */
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* General body styling */
 body {
   margin: 0;
@@ -22,12 +14,13 @@ body {
 .header {
   text-align: center;
   padding: 20px;
-  width: 65%;
+  width: 75% !important; /* Ensure width stays at 75% */
   display: flex;
   justify-content: center;
   border: 2px solid #ffffff; /* White border for the header */
   border-radius: 10px; /* Rounded corners */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+  margin-top: 20px; /* Add margin to move the header down */
 }
 
 .header:hover {
@@ -71,20 +64,20 @@ body {
   justify-content: space-between;
   align-items: stretch;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1400px; /* Increased max-width for larger content */
   margin: 0 auto;
   padding: 20px;
 }
 
 /* About Section */
 .about-section {
-  flex: 1;
+  flex: 2; /* Make the About Me section wider */
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-  padding: 20px;
+  padding: 30px; /* Add more padding for spacing */
   overflow-y: auto;
-  max-height: 500px;
+  height: 600px; /* Increase height */
 }
 
 .about-section .about-gif {
@@ -96,12 +89,13 @@ body {
 
 /* Gallery Section */
 .gallery {
-  flex: 1;
+  flex: 2; /* Make the Picture Gallery section wider */
   background-color: #1e1e1e;
   border: 1px solid #3c3f41;
   border-radius: 5px;
-  padding: 20px;
+  padding: 30px; /* Add more padding for spacing */
   text-align: center;
+  height: 600px; /* Match height with the About Me section */
 }
 
 .gallery-container {
@@ -112,8 +106,8 @@ body {
 }
 
 .gallery-display {
-  width: 300px;
-  height: 200px;
+  width: 400px; /* Increase the display area */
+  height: 300px; /* Increase height of the display area */
   background-color: #333333;
   border: 1px solid #555555;
 }
